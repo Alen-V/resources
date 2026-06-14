@@ -1,0 +1,39 @@
+# dependencies
+node_modules
+.pnpm-store
+
+# build output
+dist
+build
+out
+.next
+.turbo
+.vercel
+.cache
+
+# generated
+**/generated
+packages/design-tokens/dist
+packages/icons/dist
+
+# native
+apps/ios
+apps/android
+
+# lockfiles
+pnpm-lock.yaml
+package-lock.json
+yarn.lock
+
+# coverage
+coverage
+.nyc_output
+
+# env / logs
+*.log
+.env*
+
+# misc
+.DS_Store
+.git
+.beads

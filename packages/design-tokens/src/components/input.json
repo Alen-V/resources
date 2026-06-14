@@ -1,0 +1,9 @@
+{
+  "input": {
+    "radius":      "{radius.md}",
+    "height":      36,
+    "paddingX":    "{spacing.3}",
+    "fontSize":    "{typography.label.fontSize}",
+    "borderWidth": "{border.hairline}"
+  }
+}

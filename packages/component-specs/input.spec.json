@@ -1,0 +1,25 @@
+{
+    "name": "Input",
+    "variants": ["default"],
+    "sizes": ["sm", "md", "lg"],
+    "states": ["default", "focus", "invalid", "disabled"],
+    "colorMap": {
+        "background": "background",
+        "foreground": "foreground",
+        "placeholder": "mutedForeground",
+        "border": "input",
+        "borderFocus": "ring",
+        "borderInvalid": "destructive"
+    },
+    "rules": {
+        "minTouchTarget": 44,
+        "radius": "input.radius",
+        "borderWidth": "input.borderWidth",
+        "focusRing": "ring"
+    },
+    "platformExceptions": {
+        "web": ["focus-visible", "::placeholder"],
+        "ios": ["native keyboard", "UITextField adornments"],
+        "android": ["TextField leading/trailing icons", "material label animation"]
+    }
+}

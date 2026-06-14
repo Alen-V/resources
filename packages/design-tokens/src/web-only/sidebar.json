@@ -1,0 +1,24 @@
+{
+  "sidebar": {
+    "light": {
+      "sidebar":                  "{palette.light.sidebar}",
+      "sidebarForeground":        "{palette.light.sidebarForeground}",
+      "sidebarPrimary":           "{palette.light.sidebarPrimary}",
+      "sidebarPrimaryForeground": "{palette.light.sidebarPrimaryForeground}",
+      "sidebarAccent":            "{palette.light.sidebarAccent}",
+      "sidebarAccentForeground":  "{palette.light.sidebarAccentForeground}",
+      "sidebarBorder":            "{palette.light.sidebarBorder}",
+      "sidebarRing":              "{palette.light.sidebarRing}"
+    },
+    "dark": {
+      "sidebar":                  "{palette.dark.sidebar}",
+      "sidebarForeground":        "{palette.dark.sidebarForeground}",
+      "sidebarPrimary":           "{palette.dark.sidebarPrimary}",
+      "sidebarPrimaryForeground": "{palette.dark.sidebarPrimaryForeground}",
+      "sidebarAccent":            "{palette.dark.sidebarAccent}",
+      "sidebarAccentForeground":  "{palette.dark.sidebarAccentForeground}",
+      "sidebarBorder":            "{palette.dark.sidebarBorder}",
+      "sidebarRing":              "{palette.dark.sidebarRing}"
+    }
+  }
+}

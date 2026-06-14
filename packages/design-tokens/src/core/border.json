@@ -1,0 +1,8 @@
+{
+  "border": {
+    "hairline": 1,
+    "thin":     1,
+    "emphasis": 2,
+    "focus":    3
+  }
+}

@@ -1,0 +1,91 @@
+{
+  "palette": {
+    "light": {
+      "background":               "{template.accent.100}",
+      "foreground":               "{template.primary.950}",
+
+      "card":                     "{template.accent.50}",
+      "cardForeground":           "{template.primary.950}",
+
+      "popover":                  "{template.accent.50}",
+      "popoverForeground":        "{template.primary.950}",
+
+      "primary":                  "{template.primary.800}",
+      "primaryForeground":        "{template.accent.50}",
+
+      "secondary":                "{template.accent.200}",
+      "secondaryForeground":      "{template.primary.800}",
+
+      "muted":                    "{template.accent.200}",
+      "mutedForeground":          "{template.primary.600}",
+
+      "accent":                   "{template.accent.500}",
+      "accentForeground":         "{template.primary.950}",
+
+      "destructive":              "{color.red.600}",
+
+      "border":                   "{template.accent.300}",
+      "input":                    "{template.accent.300}",
+      "ring":                     "{template.primary.500}",
+
+      "sidebar":                  "{template.accent.50}",
+      "sidebarForeground":        "{template.primary.950}",
+      "sidebarPrimary":           "{template.primary.800}",
+      "sidebarPrimaryForeground": "{template.accent.50}",
+      "sidebarAccent":            "{template.accent.200}",
+      "sidebarAccentForeground":  "{template.primary.900}",
+      "sidebarBorder":            "{template.accent.300}",
+      "sidebarRing":              "{template.primary.500}",
+
+      "chart1":                   "{template.primary.800}",
+      "chart2":                   "{template.primary.500}",
+      "chart3":                   "{template.accent.500}",
+      "chart4":                   "{template.accent.700}",
+      "chart5":                   "{template.primary.300}"
+    },
+
+    "dark": {
+      "background":               "{template.primary.950}",
+      "foreground":               "{template.accent.100}",
+
+      "card":                     "{template.primary.900}",
+      "cardForeground":           "{template.accent.100}",
+
+      "popover":                  "{template.primary.900}",
+      "popoverForeground":        "{template.accent.100}",
+
+      "primary":                  "{template.accent.500}",
+      "primaryForeground":        "{template.primary.950}",
+
+      "secondary":                "{template.primary.800}",
+      "secondaryForeground":      "{template.accent.100}",
+
+      "muted":                    "{template.primary.800}",
+      "mutedForeground":          "{template.accent.300}",
+
+      "accent":                   "{template.primary.500}",
+      "accentForeground":         "{template.accent.50}",
+
+      "destructive":              "{color.red.500}",
+
+      "border":                   "{template.accent.50 / 0.10}",
+      "input":                    "{template.accent.50 / 0.15}",
+      "ring":                     "{template.accent.500}",
+
+      "sidebar":                  "{template.primary.900}",
+      "sidebarForeground":        "{template.accent.100}",
+      "sidebarPrimary":           "{template.accent.500}",
+      "sidebarPrimaryForeground": "{template.primary.950}",
+      "sidebarAccent":            "{template.primary.800}",
+      "sidebarAccentForeground":  "{template.accent.100}",
+      "sidebarBorder":            "{template.accent.50 / 0.10}",
+      "sidebarRing":              "{template.accent.500}",
+
+      "chart1":                   "{template.accent.500}",
+      "chart2":                   "{template.primary.400}",
+      "chart3":                   "{template.accent.300}",
+      "chart4":                   "{template.primary.600}",
+      "chart5":                   "{template.accent.700}"
+    }
+  }
+}

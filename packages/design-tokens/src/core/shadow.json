@@ -1,0 +1,8 @@
+{
+  "shadow": {
+    "sm": { "offsetX": 0, "offsetY": 1,  "blur": 2,  "spread": 0, "color": "oklch(0 0 0)", "alpha": 0.05 },
+    "md": { "offsetX": 0, "offsetY": 4,  "blur": 6,  "spread": 0, "color": "oklch(0 0 0)", "alpha": 0.10 },
+    "lg": { "offsetX": 0, "offsetY": 10, "blur": 15, "spread": 0, "color": "oklch(0 0 0)", "alpha": 0.10 },
+    "xl": { "offsetX": 0, "offsetY": 20, "blur": 25, "spread": 0, "color": "oklch(0 0 0)", "alpha": 0.10 }
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "database": "dolt",
+  "backend": "dolt",
+  "dolt_mode": "server",
+  "dolt_database": "monorepo_template",
+  "project_id": "f9c0cdf7-31f6-4b77-8eed-661edcea070f"
+}

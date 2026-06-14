@@ -1,0 +1,30 @@
+{
+  "theme": {
+    "background":         "{palette.dark.background}",
+    "foreground":         "{palette.dark.foreground}",
+
+    "card":               "{palette.dark.card}",
+    "cardForeground":     "{palette.dark.cardForeground}",
+
+    "popover":            "{palette.dark.popover}",
+    "popoverForeground":  "{palette.dark.popoverForeground}",
+
+    "primary":            "{palette.dark.primary}",
+    "primaryForeground":  "{palette.dark.primaryForeground}",
+
+    "secondary":          "{palette.dark.secondary}",
+    "secondaryForeground":"{palette.dark.secondaryForeground}",
+
+    "muted":              "{palette.dark.muted}",
+    "mutedForeground":    "{palette.dark.mutedForeground}",
+
+    "accent":             "{palette.dark.accent}",
+    "accentForeground":   "{palette.dark.accentForeground}",
+
+    "destructive":        "{palette.dark.destructive}",
+
+    "border":             "{palette.dark.border}",
+    "input":              "{palette.dark.input}",
+    "ring":               "{palette.dark.ring}"
+  }
+}

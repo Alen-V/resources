@@ -1,0 +1,8 @@
+{
+  "opacity": {
+    "subtle": 0.10,
+    "soft":   0.30,
+    "medium": 0.50,
+    "strong": 0.80
+  }
+}

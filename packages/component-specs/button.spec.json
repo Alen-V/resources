@@ -1,0 +1,26 @@
+{
+    "name": "Button",
+    "variants": ["default", "outline", "secondary", "ghost", "destructive", "link"],
+    "sizes": ["default", "xs", "sm", "lg", "icon", "iconXs", "iconSm", "iconLg"],
+    "states": ["default", "hover", "pressed", "focus", "disabled"],
+    "variantColorMap": {
+        "default": { "background": "primary", "foreground": "primaryForeground" },
+        "secondary": { "background": "secondary", "foreground": "secondaryForeground" },
+        "destructive": { "background": "destructive", "foreground": "primaryForeground" },
+        "outline": { "background": "background", "foreground": "foreground", "border": "border" },
+        "ghost": { "background": "transparent", "foreground": "foreground" },
+        "link": { "background": "transparent", "foreground": "primary" }
+    },
+    "rules": {
+        "minTouchTarget": 44,
+        "iconGap": "button.iconGap",
+        "radius": "button.radius",
+        "focusRing": "ring",
+        "focusRingWidth": "button.focusRingWidth"
+    },
+    "platformExceptions": {
+        "web": ["hover", "focus-visible"],
+        "ios": ["spring press animation"],
+        "android": ["ripple indication"]
+    }
+}

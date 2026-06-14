@@ -1,0 +1,24 @@
+{
+  "name": "@monorepo/design-tokens",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "main": "./dist/web/tokens.ts",
+  "types": "./dist/web/tokens.ts",
+  "exports": {
+    ".": "./dist/web/tokens.ts",
+    "./theme.css": "./dist/web/theme.css",
+    "./tokens.ts": "./dist/web/tokens.ts",
+    "./ios/DesignTokens.swift": "./dist/ios/DesignTokens.swift",
+    "./android/DesignTokens.kt": "./dist/android/DesignTokens.kt"
+  },
+  "files": [
+    "dist",
+    "src",
+    "scripts"
+  ],
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "lint": "echo \"(no lint configured)\""
+  }
+}

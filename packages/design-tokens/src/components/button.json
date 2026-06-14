@@ -1,0 +1,17 @@
+{
+  "button": {
+    "radius":         "{radius.md}",
+    "iconGap":        "{spacing.2}",
+    "focusRingWidth": "{border.focus}",
+    "sizes": {
+      "default": { "height": 36, "paddingX": "{spacing.4}", "fontSize": "{typography.label.fontSize}" },
+      "xs":      { "height": 28, "paddingX": "{spacing.3}", "fontSize": "{typography.caption.fontSize}" },
+      "sm":      { "height": 32, "paddingX": "{spacing.3}", "fontSize": "{typography.label.fontSize}" },
+      "lg":      { "height": 40, "paddingX": "{spacing.6}", "fontSize": "{typography.body.fontSize}" },
+      "icon":    { "height": 36, "width": 36 },
+      "iconXs":  { "height": 28, "width": 28 },
+      "iconSm":  { "height": 32, "width": 32 },
+      "iconLg":  { "height": 40, "width": 40 }
+    }
+  }
+}

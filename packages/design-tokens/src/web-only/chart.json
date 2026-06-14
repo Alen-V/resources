@@ -1,0 +1,18 @@
+{
+  "chart": {
+    "light": {
+      "1": "{palette.light.chart1}",
+      "2": "{palette.light.chart2}",
+      "3": "{palette.light.chart3}",
+      "4": "{palette.light.chart4}",
+      "5": "{palette.light.chart5}"
+    },
+    "dark": {
+      "1": "{palette.dark.chart1}",
+      "2": "{palette.dark.chart2}",
+      "3": "{palette.dark.chart3}",
+      "4": "{palette.dark.chart4}",
+      "5": "{palette.dark.chart5}"
+    }
+  }
+}
