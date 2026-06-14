@@ -1,0 +1,114 @@
+[
+    {
+        "key": "communication",
+        "label": "Communication"
+    },
+    {
+        "key": "weather",
+        "label": "Weather"
+    },
+    {
+        "key": "maps",
+        "label": "Maps"
+    },
+    {
+        "key": "objectsandtools",
+        "label": "Objects & Tools"
+    },
+    {
+        "key": "devices",
+        "label": "Devices"
+    },
+    {
+        "key": "cameraandphotos",
+        "label": "Camera & Photos"
+    },
+    {
+        "key": "gaming",
+        "label": "Gaming"
+    },
+    {
+        "key": "connectivity",
+        "label": "Connectivity"
+    },
+    {
+        "key": "transportation",
+        "label": "Transportation"
+    },
+    {
+        "key": "automotive",
+        "label": "Automotive"
+    },
+    {
+        "key": "accessibility",
+        "label": "Accessibility"
+    },
+    {
+        "key": "privacyandsecurity",
+        "label": "Privacy & Security"
+    },
+    {
+        "key": "human",
+        "label": "Human"
+    },
+    {
+        "key": "home",
+        "label": "Home"
+    },
+    {
+        "key": "fitness",
+        "label": "Fitness"
+    },
+    {
+        "key": "nature",
+        "label": "Nature"
+    },
+    {
+        "key": "editing",
+        "label": "Editing"
+    },
+    {
+        "key": "textformatting",
+        "label": "Text Formatting"
+    },
+    {
+        "key": "media",
+        "label": "Media"
+    },
+    {
+        "key": "keyboard",
+        "label": "Keyboard"
+    },
+    {
+        "key": "commerce",
+        "label": "Commerce"
+    },
+    {
+        "key": "time",
+        "label": "Time"
+    },
+    {
+        "key": "health",
+        "label": "Health"
+    },
+    {
+        "key": "shapes",
+        "label": "Shapes"
+    },
+    {
+        "key": "arrows",
+        "label": "Arrows"
+    },
+    {
+        "key": "indices",
+        "label": "Indices"
+    },
+    {
+        "key": "math",
+        "label": "Math"
+    },
+    {
+        "key": "uncategorized",
+        "label": "Uncategorized"
+    }
+]

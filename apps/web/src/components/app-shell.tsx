@@ -19,7 +19,6 @@ import {
 import { Switch } from '@/components/ui/switch';
 import { cn } from '@/lib/utils';
 import {
-    BookOpenIcon,
     BoxIcon,
     ExternalLinkIcon,
     LayersIcon,
@@ -28,7 +27,7 @@ import {
     PanelLeftIcon,
     PanelTopIcon,
     RocketIcon,
-    SettingsIcon,
+    ShapesIcon,
     SparklesIcon,
     SunIcon,
 } from 'lucide-react';
@@ -44,8 +43,7 @@ type NavItem = { label: string; href: string; icon: React.ComponentType<{ classN
 const overviewNav: NavItem[] = [
     { label: 'Dashboard', href: '/', icon: LayersIcon },
     { label: 'Components', href: '/preview', icon: SparklesIcon },
-    { label: 'Docs', href: '#', icon: BookOpenIcon },
-    { label: 'Settings', href: '#', icon: SettingsIcon },
+    { label: 'SF Symbols', href: '/ios-symbols', icon: ShapesIcon },
 ];
 
 const workspaceNav: NavItem[] = [
@@ -237,7 +235,7 @@ export function AppShell({ children }: { children: React.ReactNode }) {
 
     if (mode === 'header') {
         return (
-            <div className="flex min-h-dvh flex-1 flex-col">
+            <div className="flex h-full flex-col overflow-hidden">
                 <header className="bg-background/80 sticky top-0 z-20 flex h-16 items-center gap-6 border-b px-4 backdrop-blur sm:px-6">
                     <Link href="/" className="flex items-center">
                         <BrandMark size="sm" />
@@ -250,13 +248,13 @@ export function AppShell({ children }: { children: React.ReactNode }) {
                         <ThemeToggle />
                     </div>
                 </header>
-                <div className="flex flex-1 flex-col">{children}</div>
+                <div className="flex min-h-0 flex-1 flex-col overflow-y-auto">{children}</div>
             </div>
         );
     }
 
     return (
-        <SidebarProvider>
+        <SidebarProvider className="h-full">
             <AppSidebar pathname={pathname} />
             <SidebarInset>
                 <header className="bg-background/80 sticky top-0 z-20 flex h-14 items-center gap-3 border-b px-4 backdrop-blur sm:px-6">
@@ -269,7 +267,7 @@ export function AppShell({ children }: { children: React.ReactNode }) {
                         <ThemeToggle />
                     </div>
                 </header>
-                <div className="flex flex-1 flex-col">{children}</div>
+                <div className="flex min-h-0 flex-1 flex-col overflow-y-auto">{children}</div>
             </SidebarInset>
         </SidebarProvider>
     );

@@ -38,7 +38,7 @@ export default function RootLayout({
             suppressHydrationWarning
             className={cn('h-full font-sans antialiased', geistSans.variable, geistMono.variable, figtree.variable)}
         >
-            <body className="bg-background text-foreground flex min-h-full flex-col">
+            <body className="bg-background text-foreground flex h-full flex-col overflow-hidden">
                 <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
                     <TooltipProvider>
                         <AppShell>{children}</AppShell>

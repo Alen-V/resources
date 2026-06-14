@@ -8,3 +8,6 @@ node_modules
 
 # Claude Code local settings (user-specific)
 .claude/settings.local.json
+
+# Generated SF Symbol PNGs synced into the web app's public dir (symbols:sync)
+apps/web/public/ios-symbols/
