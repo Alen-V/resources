@@ -35,6 +35,7 @@ import {
 import { useTheme } from 'next-themes';
 
 import * as React from 'react';
+import { flushSync } from 'react-dom';
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
@@ -84,6 +85,20 @@ function isActive(pathname: string, href: string) {
     return pathname === href || pathname.startsWith(`${href}/`);
 }
 
+// Crossfade theme/layout changes via the View Transitions API. flushSync forces
+// React to commit the DOM update inside the transition's capture window so the
+// swap animates; unsupported browsers fall back to an instant update.
+function withViewTransition(update: () => void) {
+    if (typeof document !== 'undefined') {
+        const doc = document as Document & { startViewTransition?: (cb: () => void) => unknown };
+        if (typeof doc.startViewTransition === 'function') {
+            doc.startViewTransition(() => flushSync(update));
+            return;
+        }
+    }
+    update();
+}
+
 function LayoutToggle({ mode, onChange, disabled }: { mode: LayoutMode; onChange: (next: LayoutMode) => void; disabled?: boolean }) {
     const isHeader = mode === 'header';
     const label = isHeader ? 'Switch to sidebar layout' : 'Switch to header layout';
@@ -94,7 +109,7 @@ function LayoutToggle({ mode, onChange, disabled }: { mode: LayoutMode; onChange
                     variant="outline"
                     size="sm"
                     pressed={isHeader}
-                    onPressedChange={(v) => onChange(v ? 'header' : 'sidebar')}
+                    onPressedChange={(v) => withViewTransition(() => onChange(v ? 'header' : 'sidebar'))}
                     disabled={disabled}
                     aria-label={label}
                 >
@@ -119,7 +134,7 @@ function ThemeToggle() {
                     variant="outline"
                     size="sm"
                     pressed={isDark}
-                    onPressedChange={(v) => setTheme(v ? 'dark' : 'light')}
+                    onPressedChange={(v) => withViewTransition(() => setTheme(v ? 'dark' : 'light'))}
                     disabled={!mounted}
                     aria-label={label}
                 >
