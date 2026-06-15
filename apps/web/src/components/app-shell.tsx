@@ -16,7 +16,8 @@ import {
     SidebarProvider,
     SidebarTrigger,
 } from '@/components/ui/sidebar';
-import { Switch } from '@/components/ui/switch';
+import { Toggle } from '@/components/ui/toggle';
+import { Tooltip, TooltipContent, TooltipTrigger } from '@/components/ui/tooltip';
 import { cn } from '@/lib/utils';
 import {
     BoxIcon,
@@ -53,10 +54,10 @@ const workspaceNav: NavItem[] = [
 ];
 
 type LayoutMode = 'sidebar' | 'header';
-const LAYOUT_STORAGE_KEY = 'monorepo-template:layout';
+const LAYOUT_STORAGE_KEY = 'resources:layout';
 
 function useLayoutMode() {
-    const [mode, setMode] = React.useState<LayoutMode>('sidebar');
+    const [mode, setMode] = React.useState<LayoutMode>('header');
     const [mounted, setMounted] = React.useState(false);
 
     React.useEffect(() => {
@@ -85,21 +86,23 @@ function isActive(pathname: string, href: string) {
 
 function LayoutToggle({ mode, onChange, disabled }: { mode: LayoutMode; onChange: (next: LayoutMode) => void; disabled?: boolean }) {
     const isHeader = mode === 'header';
+    const label = isHeader ? 'Switch to sidebar layout' : 'Switch to header layout';
     return (
-        <label className="flex items-center gap-2 text-sm">
-            {isHeader ? (
-                <PanelTopIcon className="text-muted-foreground size-4" />
-            ) : (
-                <PanelLeftIcon className="text-muted-foreground size-4" />
-            )}
-            <span className="text-muted-foreground hidden sm:inline">Header layout</span>
-            <Switch
-                checked={isHeader}
-                onCheckedChange={(v) => onChange(v ? 'header' : 'sidebar')}
-                disabled={disabled}
-                aria-label="Use header layout"
-            />
-        </label>
+        <Tooltip>
+            <TooltipTrigger asChild>
+                <Toggle
+                    variant="outline"
+                    size="sm"
+                    pressed={isHeader}
+                    onPressedChange={(v) => onChange(v ? 'header' : 'sidebar')}
+                    disabled={disabled}
+                    aria-label={label}
+                >
+                    {isHeader ? <PanelTopIcon /> : <PanelLeftIcon />}
+                </Toggle>
+            </TooltipTrigger>
+            <TooltipContent>{label}</TooltipContent>
+        </Tooltip>
     );
 }
 
@@ -108,17 +111,23 @@ function ThemeToggle() {
     const [mounted, setMounted] = React.useState(false);
     React.useEffect(() => setMounted(true), []);
     const isDark = mounted && resolvedTheme === 'dark';
+    const label = isDark ? 'Switch to light mode' : 'Switch to dark mode';
     return (
-        <label className="flex items-center gap-2 text-sm">
-            {isDark ? <MoonIcon className="text-muted-foreground size-4" /> : <SunIcon className="text-muted-foreground size-4" />}
-            <span className="text-muted-foreground hidden sm:inline">Dark mode</span>
-            <Switch
-                checked={isDark}
-                onCheckedChange={(v) => setTheme(v ? 'dark' : 'light')}
-                disabled={!mounted}
-                aria-label="Toggle dark mode"
-            />
-        </label>
+        <Tooltip>
+            <TooltipTrigger asChild>
+                <Toggle
+                    variant="outline"
+                    size="sm"
+                    pressed={isDark}
+                    onPressedChange={(v) => setTheme(v ? 'dark' : 'light')}
+                    disabled={!mounted}
+                    aria-label={label}
+                >
+                    {isDark ? <MoonIcon /> : <SunIcon />}
+                </Toggle>
+            </TooltipTrigger>
+            <TooltipContent>{label}</TooltipContent>
+        </Tooltip>
     );
 }
 
@@ -133,10 +142,7 @@ function BrandMark({ size = 'md' }: { size?: 'sm' | 'md' }) {
             >
                 <RocketIcon className={size === 'sm' ? 'size-3.5' : 'size-4'} />
             </div>
-            <div className="flex flex-col leading-tight">
-                <span className="text-sm font-semibold">Monorepo Template</span>
-                <span className="text-muted-foreground text-xs">v0.1.0</span>
-            </div>
+            <span className="text-sm font-semibold">Resources</span>
         </div>
     );
 }
@@ -194,7 +200,7 @@ function AppSidebar({ pathname }: { pathname: string }) {
                 <SidebarMenu>
                     <SidebarMenuItem>
                         <SidebarMenuButton asChild tooltip="GitHub">
-                            <a href="https://github.com/Alen-V/monorepo-template" target="_blank" rel="noreferrer">
+                            <a href="https://github.com/Alen-V/resources" target="_blank" rel="noreferrer">
                                 <ExternalLinkIcon />
                                 <span>GitHub</span>
                             </a>
@@ -242,9 +248,8 @@ export function AppShell({ children }: { children: React.ReactNode }) {
                     </Link>
                     <Separator orientation="vertical" className="h-6" />
                     <HeaderNav pathname={pathname} />
-                    <div className="ml-auto flex items-center gap-3 sm:gap-5">
+                    <div className="ml-auto flex items-center gap-1.5">
                         <LayoutToggle mode={mode} onChange={setMode} disabled={!mounted} />
-                        <Separator orientation="vertical" className="h-5" />
                         <ThemeToggle />
                     </div>
                 </header>
@@ -261,9 +266,8 @@ export function AppShell({ children }: { children: React.ReactNode }) {
                     <SidebarTrigger className="-ml-1" />
                     <Separator orientation="vertical" className="h-5" />
                     <div className="text-muted-foreground text-sm">{pathname}</div>
-                    <div className="ml-auto flex items-center gap-3 sm:gap-5">
+                    <div className="ml-auto flex items-center gap-1.5">
                         <LayoutToggle mode={mode} onChange={setMode} disabled={!mounted} />
-                        <Separator orientation="vertical" className="h-5" />
                         <ThemeToggle />
                     </div>
                 </header>

@@ -23,8 +23,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-    title: 'Monorepo Template',
-    description: 'A modern monorepo starter with Next.js, shadcn/ui, and pnpm workspaces.',
+    title: 'Resources',
+    description: 'A personal workspace of design and development resources.',
 };
 
 export default function RootLayout({
